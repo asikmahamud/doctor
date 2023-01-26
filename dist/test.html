@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+</head>
+<body>
+    <main>
+       <button class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 border rounded-lg py-2 px-4 hover:text-white hover:bg-gray-600 transition-all duration-300">Click Me!</button>     
+    </main>
+
+    <script type="text/javascript">
+        var color = ["#f87171","#fecaca","#a8a29e","#f59e0b","#b45309","#fef08a","#78350f","#ecfccb","#6ee7b7","#67e8f9"];
+        var i = 0;
+        document.querySelector("button").addEventListener("click",
+        function(){
+            i = i < color.length ? ++i : 0;
+            document.querySelector("body").style.background = color[i]
+        })
+    </script>
+</body>
+</html>
